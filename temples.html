@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temple Album</title>
+  <meta name="description" content="A responsive temple album web page featuring multiple temples and captions.">
+  <meta name="author" content="Akena Ivan">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Playfair+Display&display=swap" rel="stylesheet">
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="temples.css">
+  <link rel="stylesheet" href="temples-large.css">
+
+  <!-- JavaScript -->
+  <script src="temples.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Temple Album</h1>
+    <button class="hamburger" aria-label="Toggle navigation">&#9776;</button>
+    <nav class="nav-menu">
+      <a href="#">Home</a>
+      <a href="#">Old</a>
+      <a href="#">New</a>
+      <a href="#">Large</a>
+      <a href="#">Small</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Our Temple Collection</h1>
+
+    <!-- Example Figures -->
+    <figure>
+      <img src="images/bern-switzerland-temple.jpg" alt="Bern-switzerland">
+      <figcaption>Bern Switzerland temple</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/boston-massachusetts-temple.jpg" alt="Boston Massachusetts">
+      <figcaption>Boston Massachusetts temple</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/brisbane-australia-temple.jpg" alt="Brisbane Australia">
+      <figcaption>Brisbane Australia Temple</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/dallas-texas-temple.jpg" alt="Dallas Texas ">
+      <figcaption>Dallas Texas Temple</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/denver-colorado-temple.jpg" alt="Denver Colorado">
+      <figcaption>Denver Colorado Temple</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/draper-utah-temple.jpg" alt="Draper Utah">
+      <figcaption>Draper Utah Temple</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/johannesburg-southafrica-temple.jpg" alt="Johannesburg South Africa">
+      <figcaption>Johannesburg South Africa Temple</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/temple-placeholder.jpg" alt="Temple Name 8">
+      <figcaption>Temple Name 8</figcaption>
+    </figure>
+
+    <figure>
+      <img src="images/temple-placeholder.jpg" alt="Temple Name 9">
+      <figcaption>Temple Name 9</figcaption>
+    </figure>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Akena Ivan</p>
+    <p>Last modified: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>

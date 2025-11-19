@@ -1,0 +1,92 @@
+/* ===========================
+    GLOBAL STYLES & VARIABLES
+   =========================== */
+:root {
+    --primary: #e63946;
+    --secondary: #1d3557;
+    --light: #f1faee;
+    --accent: #457b9d;
+    --text-dark: #222;
+}
+
+html, body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--light);
+    color: var(--text-dark);
+}
+
+header {
+    padding: 1rem;
+    text-align: center;
+    background: var(--secondary);
+    color: white;
+}
+
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    display: block;
+}
+
+.hero-label {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    padding: .75rem 1rem;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    border-radius: .5rem;
+}
+
+/* ===========================
+    GRID LAYOUT
+   =========================== */
+.info-grid {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.card {
+    background: white;
+    padding: 1rem;
+    border-radius: .75rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Hide pseudo weather icon on mobile */
+.weather-title::after {
+    content: "";
+}
+
+/* Weather SVG only visible on mobile */
+.weather-icon-mobile {
+    width: 60px;
+    display: block;
+    margin: 10px 0;
+}
+
+/* ===========================
+    MEDIA QUERY (WIDE VIEW)
+   =========================== */
+@media (min-width: 700px) {
+
+    .info-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Show weather pseudo icon instead of SVG */
+    .weather-title::after {
+        content: " ⛅";
+        margin-left: .5rem;
+        font-size: 1.4rem;
+    }
+
+    .weather-icon-mobile {
+        display: none;
+    }
+}

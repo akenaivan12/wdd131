@@ -1,0 +1,99 @@
+/* Base Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #4a90e2;
+  color: #fff;
+  padding: 1rem;
+  position: relative;
+}
+
+header h1 {
+  margin: 0 0 0.5rem 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  display: none; /* hidden by default for mobile */
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.nav-menu a:hover {
+  background-color: #357ab8;
+}
+
+/* Hamburger button */
+.hamburger {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+/* Main container */
+.container {
+  max-width: 640px;
+  margin: 1rem auto;
+  display: grid;
+  grid-template-columns: 1fr; /* single column for mobile */
+  gap: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Figure styling */
+figure {
+  margin: 0;
+  background-color: #fff;
+  padding: 0.5rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  max-width: 640px;
+  margin: 1rem auto;
+  padding: 1rem;
+  text-align: center;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+}
+
+/* Utility for showing nav when hamburger is active */
+.nav-menu.open {
+  display: flex;
+}

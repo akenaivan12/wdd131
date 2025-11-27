@@ -1,99 +1,139 @@
-/* Base Styles */
-body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f9;
-  color: #333;
+/* Mobile First CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Header */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* Header Styles */
 header {
-  background-color: #4a90e2;
-  color: #fff;
-  padding: 1rem;
-  position: relative;
+    background-color: #4a1a7e;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 header h1 {
-  margin: 0 0 0.5rem 0;
-  font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
+    font-size: 1.8rem;
+    flex: 1;
 }
 
-/* Navigation Menu */
-.nav-menu {
-  display: none; /* hidden by default for mobile */
-  flex-direction: column;
-  gap: 0.5rem;
+/* Navigation Styles */
+nav {
+    width: 100%;
+    margin-top: 1rem;
 }
 
-.nav-menu a {
-  text-decoration: none;
-  color: #fff;
-  padding: 0.5rem;
-  border-radius: 4px;
+#menu-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: block;
 }
 
-.nav-menu a:hover {
-  background-color: #357ab8;
+.nav-links {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    margin-top: 0.5rem;
 }
 
-/* Hamburger button */
-.hamburger {
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  color: #fff;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  cursor: pointer;
+.nav-links.show {
+    display: flex;
 }
 
-/* Main container */
-.container {
-  max-width: 640px;
-  margin: 1rem auto;
-  display: grid;
-  grid-template-columns: 1fr; /* single column for mobile */
-  gap: 1rem;
-  padding: 1rem;
-  box-sizing: border-box;
+.nav-links li {
+    margin: 0;
 }
 
-/* Figure styling */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1rem;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #6b2aa8;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+main h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #4a1a7e;
+}
+
+/* Temple Grid */
+.temple-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
 figure {
-  margin: 0;
-  background-color: #fff;
-  padding: 0.5rem;
-  border-radius: 4px;
-  text-align: center;
+    margin: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+figure:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 figure img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
 }
 
 figcaption {
-  margin-top: 0.5rem;
-  font-weight: bold;
+    padding: 1rem;
+    text-align: center;
+    background-color: #f8f8f8;
+    color: #4a1a7e;
+    font-weight: bold;
+    font-size: 1rem;
 }
 
-/* Footer */
+/* Footer Styles */
 footer {
-  max-width: 640px;
-  margin: 1rem auto;
-  padding: 1rem;
-  text-align: center;
-  background-color: #e0e0e0;
-  border-radius: 4px;
+    background-color: #4a1a7e;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 3rem;
 }
 
-/* Utility for showing nav when hamburger is active */
-.nav-menu.open {
-  display: flex;
+footer p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
 }

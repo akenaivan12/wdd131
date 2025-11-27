@@ -1,0 +1,143 @@
+:root {
+  --red: #c8102e;
+  --green: #007a3d;
+  --white: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.25);
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #fafafa;
+  color: #222;
+  text-align: center;
+}
+
+/* ===============================
+   HEADER
+================================*/
+.site-header {
+  background-color: var(--red);
+  color: var(--white);
+  padding: 1.5rem 0;
+}
+
+.site-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  text-transform: capitalize;
+}
+
+/* ===============================
+   HERO SECTION
+================================*/
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain; /* shows full image */
+}
+
+/* Overlay container for both info cards */
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 85%;
+  max-width: 1100px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* ===============================
+   DATA & WEATHER BOXES
+================================*/
+.data-box,
+.weather-box {
+  width: 260px;
+  background-color: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 4px 12px var(--shadow);
+  border-radius: 4px;
+  text-align: left;
+  padding: 0 0 0.6rem 0;
+}
+
+/* green title bar */
+.data-box h2,
+.weather-box h2 {
+  background-color: var(--green);
+  color: var(--white);
+  margin: 0;
+  padding: 0.5rem 0.8rem;
+  font-size: 1.2rem;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+/* inside content */
+.data-box ul,
+.weather-box ul {
+  list-style: none;
+  padding: 0.8rem 1.2rem;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* weather icon beside title (optional) */
+.weather-icon {
+  float: right;
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+}
+
+/* ===============================
+   FOOTER
+================================*/
+footer {
+  background-color: var(--red);
+  color: var(--white);
+  padding: 1rem 0 1.5rem 0;
+  font-size: 0.9rem;
+  margin-top: 0;
+}
+
+footer p {
+  margin: 0.4rem 0;
+}
+
+footer a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+/* ===============================
+   RESPONSIVE
+================================*/
+@media (max-width: 700px) {
+  .overlay {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    position: static;
+    transform: none;
+    margin: 1rem auto;
+  }
+
+  .data-box,
+  .weather-box {
+    width: 90%;
+  }
+}
+

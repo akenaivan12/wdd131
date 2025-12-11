@@ -1,72 +1,49 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Discover fascinating facts about Japan, including its culture, history, technology, and unique traditions—all in a simple and engaging overview." />
-    <meta name="author" content="Ivan Akena" />
-    <title>Explore Japan</title>
-
-    <link rel="stylesheet" href="css/place.css" />
-    <script src="js/place.js" defer></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Uganda</title>
+  <link rel="stylesheet" href="styles/japan.css">
+  <script defer src="scripts/japan.js"></script>
 </head>
 <body>
-
-<header>
+  <header class="site-header">
     <h1>Japan</h1>
-</header>
+  </header>
 
-<main>
-
-    <!-- HERO SECTION -->
+  <main>
     <section class="hero">
-        <picture>
-            <source srcset="images/hero-large.webp" media="(min-width: 900px)">
-            <source srcset="images/hero-medium.webp" media="(min-width: 600px)">
-            <img src="images/japan.webp" alt="Scenic view of Japan">
-        </picture>
+      <img src="images/japan.webp" alt="scenic view of japan" class="hero-img">
 
-        <div class="hero-label">
-            <h2>Discover the Land of the Rising Sun</h2>
-        </div>
+      <div class="overlay">
+        <section class="data-box">
+          <h2>Data</h2>
+          <ul>
+            <li><strong>Area:</strong> 377,875 sq km</li>
+            <li><strong>Population:</strong> 124.3 million</li>
+            <li><strong>Capital:</strong> Tokyo</li>
+            <li><strong>Languages:</strong> Japanese</li>
+            <li><strong>Currency:</strong> Japanese Yen</li>
+            <li><strong>Time Zone:</strong> GMT +9</li>
+            <li><strong>Calling Code:</strong> +81</li>
+            <li><strong>Internet TLD:</strong> .jp</li>
+          </ul>
+        </section>
+
+        <section class="weather-box">
+          <h2>Weather <img src="images/weather.svg" alt="weather icon" class="weather-icon"></h2>
+          <ul>
+            <li><strong>Temperature:</strong> 11 °C</li>
+            <li><strong>Conditions:</strong> SUNNY</li>
+            <li><strong>Wind:</strong> 8 km/h</li>
+            <li><strong>Wind Chill:</strong> 10 °C</li>
+          </ul>
+        </section>
+      </div>
     </section>
-
-    <!-- WEATHER + DATA SECTION -->
-    <section class="info-grid">
-
-        <!-- WEATHER CARD -->
-        <div class="card weather">
-            <h2 class="weather-title">Weather <span class="weather-icon-desktop"></span></h2>
-
-            <!-- Mobile SVG Weather Icon -->
-            <img class="weather-icon-mobile" src="images/weather.svg" alt="Weather icon">
-
-            <p><strong>Temperature:</strong> <span id="temp">7</span> °C</p>
-            <p><strong>Wind Speed:</strong> <span id="wind">12</span> km/h</p>
-            <p><strong>Wind Chill:</strong> <span id="windchill"></span></p>
-        </div>
-
-        <!-- DATA CARD -->
-        <div class="card data">
-            <h2>About Japan</h2>
-            <ul>
-                <li>Capital: Tokyo</li>
-                <li>Population: 125 million</li>
-                <li>Famous for: Cherry blossoms, temples, technology</li>
-                <li>Region: East Asia</li>
-                <li>Its capital, Tokyo, is one of the most populous metropolitan areas in the world</li>
-                <li>Japan has the third-largest economy globally by nominal GDP</li>
-            </ul>
-        </div>
-
-    </section>
-
-</main>
-
+  </main>
 <footer>
-    <p>&copy; <span id="currentyear"></span> Japan Travel Showcase</p>
-    <p>Last Modified: <span id="lastmodified"></span></p>
+  <p>&copy; <span id="currentYear"></span> Land of the Rising Sun 🌍 Japan</p>
+  <p>Last Modification: <span id="lastModified"></span></p>
 </footer>
-
-</body>
-</html>

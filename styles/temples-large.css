@@ -1,23 +1,57 @@
-@media only screen and (min-width: 768px) {
-  /* Show navigation as horizontal flex */
-  .nav-menu {
-    display: flex !important;
-    flex-direction: row;
-    justify-content: center;
-    gap: 1rem;
-  }
+/* Larger View CSS - Media Query for Desktop */
+@media (min-width: 640px) {
+    /* Header adjustments */
+    header {
+        flex-wrap: nowrap;
+    }
 
-  /* Hide hamburger on large screens */
-  .hamburger {
-    display: none;
-  }
+    header h1 {
+        flex: 0;
+    }
 
-  /* Main grid: 3 columns for large screens */
-  .container {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
+    /* Navigation for larger screens */
+    nav {
+        width: auto;
+        margin-top: 0;
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+    }
 
-  header {
-    text-align: center;
-  }
+    #menu-button {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        gap: 0;
+        margin-top: 0;
+    }
+
+    .nav-links a {
+        padding: 0.8rem 1.5rem;
+    }
+
+    /* Temple Grid - 2 columns for tablets */
+    .temple-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Temple Grid - 3 columns for desktop */
+    .temple-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+    }
+
+    main {
+        padding: 0 2rem;
+    }
+
+    main h1 {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
 }

@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>RightsWatch Uganda — Human Rights Violations</title>
+  <meta name="description" content="Documented human rights violations in Uganda, reporting tools, and resources for protection." />
+  <link rel="stylesheet" href="base.css" />
+  <style>
+    /* Homepage specific styles */
+    body.home-page {
+      background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('https://images.unsplash.com/photo-1589652717521-10c0d092dea9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+      animation: fadeIn 1s ease-out;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      opacity: 0.9;
+    }
+
+    .content {
+      background: rgba(255, 255, 255, 0.98);
+      color: #333;
+      padding: 3rem;
+      border-radius: 20px;
+      max-width: 1000px;
+      margin: 2rem auto;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    .content h2 {
+      color: var(--primary);
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .content p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+      text-align: center;
+      color: #444;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+
+    .stat-card {
+      background: white;
+      color: var(--primary);
+      padding: 2rem;
+      border-radius: 15px;
+      text-align: center;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border: 3px solid var(--primary);
+      box-shadow: 0 10px 30px rgba(26, 35, 126, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+    }
+
+    .stat-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(26, 35, 126, 0.2);
+      border-color: var(--accent);
+    }
+
+    .stat-number {
+      font-size: 3.5rem;
+      font-weight: 800;
+      display: block;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+      text-shadow: none;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 1.2rem;
+      color: #555;
+      font-weight: 600;
+    }
+
+    .emergency-section {
+      background: linear-gradient(45deg, #d32f2f, #ff5252);
+      color: white;
+      padding: 2.5rem;
+      border-radius: 15px;
+      text-align: center;
+      margin: 3rem 0;
+      box-shadow: 0 10px 30px rgba(211, 47, 47, 0.3);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .emergency-section h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: white;
+    }
+
+    .emergency-section p {
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+      color: white !important;
+    }
+
+    .emergency-section strong {
+      font-size: 1.3rem;
+      color: #ffcc00;
+    }
+
+    /* Call to Action */
+    .cta-section {
+      background: white;
+      color: var(--primary);
+      padding: 2.5rem;
+      border-radius: 15px;
+      text-align: center;
+      margin: 2rem 0;
+      border: 3px solid var(--primary);
+      box-shadow: 0 10px 30px rgba(26, 35, 126, 0.1);
+    }
+
+    .cta-section h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    .cta-section p {
+      color: #555;
+      font-size: 1.1rem;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: var(--secondary);
+      color: white;
+      padding: 1rem 2.5rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      transition: all 0.3s;
+      border: 2px solid transparent;
+      box-shadow: 0 5px 15px rgba(211, 47, 47, 0.3);
+    }
+
+    .cta-button:hover {
+      background: #b71c1c;
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(183, 28, 28, 0.4);
+      border-color: white;
+    }
+
+    /* Navigation - RESTORED TO WHITE TEXT */
+    .nav {
+      background: rgba(255, 255, 255, 0.15) !important;
+      backdrop-filter: blur(10px);
+      padding: 1rem;
+      margin: 1rem auto;
+      border-radius: 50px;
+      max-width: 600px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      animation: slideDown 0.8s ease-out;
+      position: relative;
+      z-index: 100;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .nav a {
+      color: white !important;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.5rem 1.5rem;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .nav a:hover {
+      background: rgba(255, 255, 255, 0.3) !important;
+      color: white !important;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+    }
+
+    .nav a.active {
+      background: rgba(211, 47, 47, 0.8) !important;
+      color: white !important;
+      box-shadow: 0 4px 15px rgba(211, 47, 47, 0.4);
+    }
+
+    /* Footer text color fix */
+    footer {
+      background: linear-gradient(90deg, var(--dark), #1a1a1a);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      margin-top: 3rem;
+      position: relative;
+    }
+
+    footer p {
+      color: white !important;
+    }
+
+    footer a {
+      color: var(--accent) !important;
+      text-decoration: none;
+      font-weight: 600;
+      margin-left: 1rem;
+      transition: all 0.3s;
+    }
+
+    footer a:hover {
+      color: white !important;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body class="home-page">
+  <header>
+    <h1>RightsWatch Uganda</h1>
+    <nav>
+      <ul class="nav">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="incidents.html">Report & Incidents</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="references.html">References</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="ribbon">⚠️ URGENT: Report Human Rights Violations Anonymously</div>
+
+    <section class="hero">
+      <h1>Protecting Human Rights in Uganda</h1>
+      <p>Documenting violations, empowering communities, and advocating for justice since 2020</p>
+    </section>
+
+    <section class="content">
+      <h2>Overview</h2>
+      <p>Uganda continues to face challenges including unlawful arrests, media suppression, disappearances, and violence against vulnerable communities. This site provides a summary of verified incidents, resources, and a way to safely report violations.</p>
+      
+      <div class="stats">
+        <div class="stat-card">
+          <span class="stat-number">247+</span>
+          <span class="stat-label">Cases Documented</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">89</span>
+          <span class="stat-label">Legal Interventions</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">42</span>
+          <span class="stat-label">Partner Organizations</span>
+        </div>
+      </div>
+
+      <div class="emergency-section">
+        <h3>🚨 Emergency Assistance</h3>
+        <p>If you're in immediate danger or need urgent legal assistance:</p>
+        <p><strong>Hotline: +256-800-123-456</strong></p>
+        <p>Available 24/7 • Confidential • Multilingual Support</p>
+      </div>
+
+      <div class="cta-section">
+        <h3>Report a Violation</h3>
+        <p>Have you witnessed or experienced a human rights violation? Your report can make a difference.</p>
+        <a href="incidents.html" class="cta-button">Submit Report Now →</a>
+      </div>
+    </section>
+  </main>
+
+  <a href="incidents.html" class="emergency-btn">🆘</a>
+
+  <footer>
+    <p>&copy; 2025 RightsWatch Uganda | Protecting Human Dignity Across Uganda</p>
+    <p>Contact: info@rightswatch.ug | Follow us for updates</p>
+  </footer>
+</body>
+</html>

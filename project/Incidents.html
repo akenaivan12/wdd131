@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Report Human Rights Violation — RightsWatch Uganda</title>
+  <link rel="stylesheet" href="base.css" />
+  <link rel="stylesheet" href="incidents.css" />
+</head>
+<body class="incidents-page">
+<header>
+  <h1>Report & View Incidents</h1>
+  <nav>
+    <ul class="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="incidents.html" class="active">Report & Incidents</a></li>
+      <li><a href="resources.html">Resources</a></li>
+      <li><a href="references.html">References</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="incidents-main">
+  <div class="ribbon">🔒 Anonymous Reporting • Your Safety is Our Priority</div>
+  
+  <section>
+    <h2>Submit a Report</h2>
+    <form id="reportForm">
+      <label for="type">Type of Violation</label>
+      <select id="type" required>
+        <option value="">Select...</option>
+        <option>Arbitrary Arrest</option>
+        <option>Torture</option>
+        <option>Forced Disappearance</option>
+        <option>Media Suppression</option>
+        <option>Other</option>
+      </select>
+
+      <label for="location">Location</label>
+      <input id="location" type="text" required />
+
+      <label for="description">Description</label>
+      <textarea id="description" required></textarea>
+
+      <button type="submit">Submit Report</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Reported Incidents</h2>
+    <div id="incidentList">
+      <!-- Sample incident cards -->
+      <div class="incident-card">
+        <h2>Arbitrary Arrest in Kampala</h2>
+        <div class="meta">
+          <span>📍 Kampala Central</span>
+          <span>📅 March 15, 2025</span>
+          <span>⚠️ Ongoing</span>
+        </div>
+        <p class="description">Multiple protestors were arrested without warrant during a peaceful demonstration. Legal representation has been denied.</p>
+      </div>
+      
+      <div class="incident-card">
+        <h2>Media Office Raid</h2>
+        <div class="meta">
+          <span>📍 Gulu City</span>
+          <span>📅 March 10, 2025</span>
+          <span>✅ Documented</span>
+        </div>
+        <p class="description">Security forces raided independent media house, confiscated equipment, and detained journalists overnight.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<a href="incidents.html" class="emergency-btn">🆘</a>
+
+<footer>
+  <p>&copy; 2025 RightsWatch Uganda</p>
+  <a href="references.html">References</a>
+</footer>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RightsWatch Uganda — Human Rights Violations in Uganda</title>
+  <meta name="description" content="RightsWatch Uganda — verified summaries, resources, and a safe reporting platform about human rights violations in Uganda." />
+  <meta name="author" content="Ivan Akena">
+
+
+  <style>
+    :root {
+      --accent:#004aad;
+      --alert:#d9534f;
+      --muted:#555;
+      --bg:#ffffff;
+      --maxw:1000px;
+      --gap:1rem;
+      font-synthesis: none;
+    }
+    * { box-sizing:border-box }
+    html,body { height:100% }
+    body {
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      color:#111;
+      background: #f5f7fb;
+      line-height:1.45;
+    }
+    .container { max-width:var(--maxw); margin:0 auto; padding:1rem }
+    header.site-header { background:var(--accent); color:#fff; position:sticky; top:0; z-index:20 }
+    .site-header .container { display:flex; align-items:center; justify-content:space-between; gap:.5rem }
+    .logo { font-weight:700; font-size:1.1rem; color:#fff; text-decoration:none }
+    nav.main-nav ul { list-style:none; margin:0; padding:0; display:flex; gap:1rem }
+    nav.main-nav a { color:#fff; text-decoration:none; padding:.5rem; border-radius:6px }
+    nav.main-nav a[aria-current="page"] { background:rgba(255,255,255,.12) }
+    button.nav-toggle { display:none; background:transparent; border:1px solid rgba(255,255,255,.2); color:#fff; padding:.3rem .5rem; border-radius:6px }
+    main { padding:1.25rem 0 }
+    .hero { display:grid; gap:1rem; align-items:center; background:#fff; padding:1rem; border-radius:8px; border:1px solid #eee }
+    .hero-grid { display:grid; grid-template-columns:1fr; gap:1rem; align-items:center }
+    .hero h1 { margin:.2rem 0; font-size:clamp(1.4rem,3vw,2.2rem) }
+    .btn { display:inline-block; background:var(--accent); color:#fff; padding:.5rem .75rem; border-radius:6px; text-decoration:none; cursor:pointer }
+    .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1rem; margin-top:1rem }
+    article.card { background:#fff; padding:1rem; border-radius:8px; border:1px solid #eee }
+    .muted { color:var(--muted); font-size:.95rem }
+    .callout { padding:.75rem; border-radius:8px; background:#fff7f7; border:1px solid rgba(217,83,79,.12) }
+    footer.site-footer { margin-top:2rem; padding:1rem 0; background:#111; color:#fff; text-align:center }
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0 }
+    form .form-row { margin-bottom:.75rem }
+    label { display:block; margin-bottom:.25rem; font-weight:600 }
+    input[type="text"],input[type="email"],textarea,select {
+      width:100%; padding:.5rem; border:1px solid #ddd; border-radius:6px;
+    }
+    .small { font-size:.9rem }
+    .flex { display:flex; gap:.5rem; align-items:center }
+    @media(min-width:800px) {
+      .hero-grid { grid-template-columns:1fr 420px }
+    }
+    @media(max-width:799px){
+      nav.main-nav { display:none }
+      button.nav-toggle { display:inline-block }
+      .container { padding:.75rem }
+    }
+    a:focus,button:focus,input:focus,textarea:focus {
+      outline:3px solid rgba(0,74,173,.18);
+      outline-offset:2px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="#home" data-link>RightsWatch Uganda</a>
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="#home" aria-current="page">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#report">Report</a></li>
+          <li><a href="#references">References</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" id="navToggle">Menu</button>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section id="home" class="page">
+      <div class="hero hero-grid">
+        <div>
+          <h1>Human Rights Violations in Uganda</h1>
+          <p class="muted">An evidence-oriented student project documenting verified summaries, resources, and a safe reporting platform.</p>
+          <p><a class="btn" href="#report">Report an incident</a></p>
+
+          <section>
+            <h2>Key Issues</h2>
+            <ul id="keyIssues" class="muted"></ul>
+          </section>
+        </div>
+
+        <aside class="callout">
+          <img alt="Placeholder illustration" loading="lazy"
+               style="width:100%;height:auto;border-radius:6px;border:1px solid #eee"
+               src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="600" height="360"><rect width="100%" height="100%" fill="%23f7f7f9"/><text x="50%" y="45%" font-size="20" text-anchor="middle" fill="%23004aad" font-family="Arial">RightsWatch Uganda</text></svg>'>
+          <p class="small muted">Latest verified cases will appear below.</p>
+        </aside>
+      </div>
+
+      <section id="latest" style="margin-top:1rem">
+        <h2>Latest Verified Summaries</h2>
+        <div id="cases" class="cards"></div>
+      </section>
+    </section>
+
+    <section id="about" class="page hidden">
+      <h2>About this Project</h2>
+      <p>This site is a student project documenting human rights concerns in Uganda.</p>
+    </section>
+
+    <section id="report" class="page hidden">
+      <h2>Report an Incident</h2>
+      <p class="muted">Reports are saved locally in your browser only.</p>
+
+      <form id="reportForm" novalidate>
+        <div class="form-row">
+          <label for="location">Location</label>
+          <input id="location" required placeholder="e.g., Kampala">
+        </div>
+
+        <div class="form-row">
+          <label for="summary">Summary</label>
+          <textarea id="summary" rows="5" required></textarea>
+        </div>
+
+        <div class="form-row">
+          <button class="btn" type="submit">Save report</button>
+        </div>
+      </form>
+
+      <h3>Saved Reports</h3>
+      <ul id="savedReports" class="muted"></ul>
+    </section>
+
+    <section id="references" class="page hidden">
+      <h2>References</h2>
+      <ul class="muted">
+        <li>Amnesty International</li>
+        <li>Human Rights Watch</li>
+        <li>UN OHCHR</li>
+        <li>Uganda Human Rights Commission</li>
+      </ul>
+    </section>
+
+    <section id="planning-document" class="page">
+      <h2>Website Planning Document — HappyMart Express</h2>
+      <p><strong>Site Name:</strong> HappyMart Express</p>
+      <p>The site provides product highlights, promotions, and store information.</p>
+
+      <h3>Scenarios</h3>
+      <ul>
+        <li>Weekly discounts</li>
+        <li>Store hours</li>
+      </ul>
+
+     
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> RightsWatch Uganda — by Ivan Akena</p>
+    </div>
+  </footer>
+
+</body>
+</html>
